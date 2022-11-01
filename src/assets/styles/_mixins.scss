@@ -1,0 +1,57 @@
+
+@mixin links{
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    border: none;
+}
+
+@mixin flex($align, $justify, $direction) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+@mixin grid($columns, $gap) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-gap: $gap;
+}
+@mixin pa_ma($padding, $margin) {
+    padding: $padding;
+    margin: $margin;
+}
+@mixin positions($pos, $top, $bottom, $left, $right, $width, $height) {
+    content: "";
+    position: $pos;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+    width: $width;
+    height: $height;
+}
+@mixin width($width, $height, $background, $colors, $radius, $padding) {
+    width: $width;
+    height: $height;
+    background: $background;
+    color: $colors;
+    border-radius: $radius;
+    padding: $padding;
+}
+@mixin zindex($pos, $index) {
+    position: $pos;
+    z-index: $index;
+}
+@mixin button($color,$font,$font-size,$background){
+   
+    color: $color;
+    font-family: $font;
+    font-size: $font-size;
+    background-color: $background;
+    border-radius: 20px;
+    border: none;
+
+}

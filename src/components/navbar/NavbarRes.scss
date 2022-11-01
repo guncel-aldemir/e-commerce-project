@@ -1,0 +1,40 @@
+@use "../../assets/styles/" as *;
+
+.navbarRes{
+@include positions (absolute,0,null,0,null,100%,100vh)    ;
+@include flex(flex-start,flex-start,column);
+background: rgba(255, 255, 255, 0.8);
+box-shadow: 0 0 4px 0 rgb(115 115 115 / 20%);;
+z-index: 99;
+border-radius: 10px;
+position: fixed;
+.linksSideResponse{
+    width: 100%;    
+    .close{
+       display: flex;
+       flex-direction: row;
+       justify-content: flex-end;
+      &>*{
+        padding: 30px;
+        color: $primary;
+        
+      }
+    }
+    .links{
+        @include links;
+        .link{
+            margin-top: 50px;
+           &>a{
+            @include links;
+            color: $blue;
+            font-family: $font-family;
+                font-weight: $font-weight-700;
+            &:hover{
+                color: $primary;
+            }
+           }
+        }
+    }
+}
+
+}

@@ -1,0 +1,99 @@
+@use "../../assets/styles/" as *;
+
+.navbar{
+    @include flex(center,space-between,row);
+    position: relative;
+   
+    .toggle{
+        display: none;
+        
+        &>button{
+            border-radius: 20px;
+            border: none;
+            color: $primary;
+            background-color: transparent;
+        }
+    }
+    .logoSide{
+    
+       &>img{
+        width: 100px;
+       
+       }
+    }
+    .linksSide{
+        
+       .links{
+        @include flex(center,space-between,row);
+        gap: 25px;
+        @include links;
+        .link{
+           &>a{
+            @include links;
+            font-family: $font-family;
+            font-weight: $font-weight-700;
+            color:$blue;
+           &:hover{
+            color:$primary;
+           }
+           }
+        }
+       }
+    }
+    
+    .searchSide{
+        @extend .navbar;
+        .search{
+            @include width(200px, 30px, $white, none, 50px, 10px);
+            @include flex(center,space-between,row);
+            &>input{
+                border: none;
+                color: $blue;
+                &:focus{
+                    outline: none;
+                    
+                }
+            }
+        }
+        .users{
+            @include pa_ma(0,5px);
+            .user{
+                margin-left: 10px;
+            }
+        }
+        .buttonBags{
+            @include flex(center,center,row);
+
+            @include button($white,$font-family,$font-weight-500,$primary);
+            padding: 10px 20px;
+            .button{
+                border: none;
+                background-color: $primary;
+                color: $white;
+            }
+        }
+    }
+}
+@media (min-width:120px) and (max-width:900px){
+    .navbar{
+        display: flex;
+        justify-content: space-around;
+        gap: 50px;
+        .toggle{
+            display: block;
+        }
+
+        .linksSide{
+            display: none;
+        }
+        .searchSide{
+           .search,.users{
+            display: none;
+           }
+           .buttonBags{
+            padding: 10px;
+        }
+        }
+        
+    }
+}

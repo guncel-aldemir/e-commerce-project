@@ -1,0 +1,53 @@
+@use "../../../assets/styles/" as *;
+.heroSide{
+@include flex(center,center,column);
+    .hero{
+        @include width(70%,auto,0,0,0,0);
+        padding: 10px;
+        text-align: center;
+        .heroH1{
+            color: $blue;
+            font-family: $font-family;
+            font-weight: $font-weight-500;
+            line-height: 1;
+            .spanText{
+                color: $primary;
+                
+                font-size: 30px;
+            }
+        }
+        .text{
+            margin: 30px 0 50px 0;
+            font-family: $font-family;
+            font-weight: $font-weight-400;
+            color: #c0c3c6;
+        }
+        .search{
+            @include width(100%,none,$white,$dark,40px,10px);
+            @include flex(center, center, row);
+            box-shadow: -5px 9px 20px 0px rgb(23 45 89 / 3%);
+            hr{
+                background: rgba(#000000, 0.3);
+                width: .1rem;
+                margin: 5px;
+                height: 15px;
+            }
+            input {
+                width: 70%;
+                padding: 10px;
+                border: none;
+                font-size: 15px;
+               
+            }
+            .searchButton{
+                border: none;
+                background: none;
+            }
+        }
+        .textTwo{
+            opacity: .8;
+            color: #c0c3c6;
+            font-family: $font-family;
+        }
+    }
+}
