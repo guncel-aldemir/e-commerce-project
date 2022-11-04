@@ -1,13 +1,15 @@
 import React from "react";
-import Card from "./card/Card";
+import Product from "../product/Product";
+import Card from "../card/Card";
 
 const Main = () => {
   return (
     <main>
       <div>
-        Main
+        
         <Card />
       </div>
+      <Product/>
     </main>
   );
 };

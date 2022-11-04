@@ -1,0 +1,12 @@
+@use "../../assets/styles/" as *;
+
+.footer{
+    @include flex(center,center,row);
+    height: 10vh;
+    background-color: $white;
+    color: $blue;
+    font-weight: $font-family;
+    font-weight: $font-weight-500;
+    margin-top: 20px;
+    font-size: 15px;
+}

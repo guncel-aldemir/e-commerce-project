@@ -1,5 +1,5 @@
 import React from "react";
-import {cards} from "../../../Data/Data";
+import {cards} from "../../Data/Data";
 import "./Card.scss"
 const Card = () => {
   return <section className="cards">
@@ -11,7 +11,7 @@ const Card = () => {
           </div>
           <div className="infoSide">
             <h4>{card.name}</h4>
-            <p>{card.items}</p>
+            
           </div>
         </div>
       ))

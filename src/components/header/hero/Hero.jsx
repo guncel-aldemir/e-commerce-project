@@ -21,7 +21,7 @@ const Hero = () => {
                     <BiSearch size={20}/>
                 </button>
             </div>
-            <p className="textTwo">Examples: Mockup, PSD, Theme Design, Image…</p>
+            <p className="textTwo">Examples: Sweatshirts, Shirts, Shoes, Coats…</p>
         </div>
     </section>
   )
